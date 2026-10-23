@@ -1,5 +1,5 @@
 // Tour 통합 Service Worker (모든 투어 공용)
-// scope: 이 파일이 있는 폴더 (/seoul/)
+// scope: 이 파일이 있는 폴더 (/tour/)
 // 투어를 계속 다듬는 중이라 네트워크 우선: 온라인이면 항상 최신, 오프라인이면 마지막 캐시.
 const CACHE_VERSION = 'tour-v9';
 const CORE_ASSETS = [

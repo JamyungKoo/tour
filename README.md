@@ -1,9 +1,9 @@
-# Seoul
+# Tour
 
 현장에서 폰 한 손으로 따라가는 셀프 가이드 도보 투어 모음. [poland-tour](https://jamyungkoo.github.io/poland-tour/)의 엔진을 가져와 투어 단위로 쪼갰다.
 
-- 웹: <https://jamyungkoo.github.io/seoul/>
-- 투어마다 하위 경로 하나: `/seoul/<도시>-<MMDD>/` (예: `/seoul/seoul-1024/`)
+- 웹: <https://jamyungkoo.github.io/tour/>
+- 투어마다 하위 경로 하나: `/tour/<도시>-<MMDD>/` (예: `/tour/seoul-1024/`)
 
 ## 수록 투어
 
@@ -15,11 +15,11 @@
 ## 구조
 
 ```
-seoul/
+tour/
 ├── index.html          투어 목록
 ├── env.js              자동 생성 (커밋 안 함) — window.TOUR_ENV
 ├── manifest.json       PWA 매니페스트 (공용)
-├── sw.js               Service Worker (scope = /seoul/, 네트워크 우선)
+├── sw.js               Service Worker (scope = /tour/, 네트워크 우선)
 ├── navi/               공용 엔진
 │   ├── navi.css
 │   ├── navi-core.js    지도 링크(카카오/구글) · 헤더 · 안내 카드
@@ -93,7 +93,7 @@ python tools/build_env.py         # → env.js
 cd .. && python -m http.server 8778
 ```
 
-SW scope가 폴더 기준이라 이 저장소의 **상위 폴더**에서 서버를 띄운다 → <http://localhost:8778/seoul/seoul-1024/>
+SW scope가 폴더 기준이라 이 저장소의 **상위 폴더**에서 서버를 띄운다 → <http://localhost:8778/tour/seoul-1024/>
 
 ## 배포 (GitHub Pages)
 
@@ -103,7 +103,7 @@ SW scope가 폴더 기준이라 이 저장소의 **상위 폴더**에서 서버�
 2. **Settings → Secrets and variables → Actions → New repository secret**: `KAKAO_JS_KEY`
 3. Kakao Developers 앱에 사이트 도메인 `https://jamyungkoo.github.io` 등록 (로컬용 `http://localhost:8778`도)
 
-→ <https://jamyungkoo.github.io/seoul/>
+→ <https://jamyungkoo.github.io/tour/>
 
 ## 라이선스
 
