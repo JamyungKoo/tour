@@ -1,0 +1,77 @@
+{
+  "s01-s02": {
+    "labels": [
+      [37.5758642, 126.9842002, "Anguk Stn Exit 6", "start", "ne"],
+      [37.5739062, 126.9818306, "Jogyesa Temple", "end", "s"],
+      [37.5754855, 126.9830871, "Insadong-gil entrance", "place", "n"]
+    ]
+  },
+  "s02-s03": {
+    "labels": [
+      [37.5739062, 126.9818306, "Jogyesa Temple", "start", "n"],
+      [37.5742559, 126.9848198, "Ssamziegil", "end", "n"],
+      [37.57487, 126.98395, "Insadong-gil", "street", "n"]
+    ]
+  },
+  "s03-s05": {
+    "labels": [
+      [37.5742559, 126.9848198, "Ssamziegil", "start", "w"],
+      [37.5681416, 126.987652, "Cheonggyecheon · Samilgyo Bridge", "end", "sw"],
+      [37.5729775, 126.9862331, "Insadong-gil", "street", "w"],
+      [37.5711724, 126.9875969, "Insadong-gil south end", "place", "w"],
+      [37.5701691, 126.9876396, "Jongno 2-ga", "place", "e"]
+    ]
+  },
+  "s05-s06": {
+    "labels": [
+      [37.5681416, 126.987652, "Samilgyo Bridge", "start", "s"],
+      [37.5639784, 126.9842159, "Myeongdong Street", "end", "e"],
+      [37.5686, 126.9845, "Cheonggyecheon Stream", "street", "s"],
+      [37.5684, 126.9866, "King Jeongjo procession tiles", "note", "n"],
+      [37.5690064, 126.9810367, "Gwangtonggyo Bridge", "place", "n"],
+      [37.5649285, 126.9817315, "Lotte Dept. Store", "place", "w"],
+      [37.5659494, 126.9826171, "Euljiro 1-ga Stn", "place", "e"],
+      [37.5672, 126.9826, "Namdaemun-ro", "street", "w"],
+      [37.5636618, 126.9821533, "Myeongdong-gil entrance", "place", "sw"]
+    ]
+  },
+  "s06-s07": {
+    "labels": [
+      [37.5639784, 126.9842159, "Myeongdong Street", "start", "nw"],
+      [37.5632896, 126.9873198, "Myeongdong Cathedral", "end", "se"],
+      [37.56385, 126.9858, "Myeongdong-gil", "street", "n"],
+      [37.5625608, 126.9856037, "Myeongdong Kyoja (noodles)", "place", "s"]
+    ]
+  },
+  "s07-s08": {
+    "legs": [0],
+    "labels": [
+      [37.5632896, 126.9873198, "Myeongdong Cathedral", "start", "w"],
+      [37.5592655, 126.9892022, "Yejang Bus Terminal", "end", "w"],
+      [37.56, 126.9894, "Bus 01A / 01B → N Seoul Tower", "note", "e"],
+      [37.5608977, 126.9863762, "Myeongdong Stn", "place", "w"]
+    ]
+  },
+  "s08-s09": {
+    "legs": [2],
+    "labels": [
+      [37.5592655, 126.9892022, "Yejang (get off bus 01B)", "start", "s"],
+      [37.5612019, 126.9941091, "Chungmuro Stn (Lines 3 · 4)", "end", "n"],
+      [37.5608977, 126.9863762, "Myeongdong Stn", "place", "n"]
+    ]
+  },
+  "s01-s03": {
+    "labels": [
+      [37.5758642, 126.9842002, "Anguk Stn Exit 6", "start", "ne"],
+      [37.5742559, 126.9848198, "Ssamziegil", "end", "e"],
+      [37.5754855, 126.9830871, "Insadong-gil entrance", "place", "w"]
+    ]
+  },
+  "s08-s10": {
+    "labels": [
+      [37.5512692, 126.9882959, "N Seoul Tower", "start", "n"],
+      [37.5588658, 127.0050189, "Dongguk Univ. Stn Exit 6", "end", "w"],
+      [37.5528577, 126.9999139, "National Theater", "place", "nw"]
+    ]
+  }
+}

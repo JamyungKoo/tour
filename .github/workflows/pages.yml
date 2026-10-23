@@ -1,0 +1,41 @@
+# GitHub Pages 배포 — main에 push하면 env.js를 만들어 사이트 전체를 올린다.
+# 준비: 저장소 Settings → Pages → Source를 "GitHub Actions"로,
+#       Settings → Secrets and variables → Actions에 KAKAO_JS_KEY 추가.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: env.js 생성 (Secret → 브라우저용 설정)
+        run: python3 tools/build_env.py
+        env:
+          KAKAO_JS_KEY: ${{ secrets.KAKAO_JS_KEY }}
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

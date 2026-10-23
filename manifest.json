@@ -1,0 +1,33 @@
+{
+  "name": "셀프 가이드 투어",
+  "short_name": "Tour",
+  "description": "현장에서 폰 한 손으로 따라가는 도보 가이드 투어 모음",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f8fa",
+  "theme_color": "#2f5d8c",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "navi/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "navi/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "navi/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["travel", "navigation"]
+}

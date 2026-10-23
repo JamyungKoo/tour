@@ -1,0 +1,16 @@
+.DS_Store
+*.log
+.vscode/
+.idea/
+node_modules/
+__pycache__/
+
+# 키·환경값 — tools/build_env.py가 .env로 env.js를 만든다 (배포는 GitHub Secret)
+.env
+env.js
+
+# 지도 타일 캐시 (tools/render_route_maps.py)
+tools/.tile-cache/
+
+# 카카오 지도 SDK 실험판 — 로컬에만 둔다 (배포 안 함)
+seoul-1024-kakaojs/

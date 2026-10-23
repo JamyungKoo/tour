@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2f5d8c">
+<title>셀프 가이드 투어</title>
+<meta name="description" content="현장에서 폰 한 손으로 따라가는 도보 가이드 투어 모음.">
+<link rel="stylesheet" href="navi/navi.css">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="navi/icons/icon-192.png">
+<link rel="icon" type="image/png" href="navi/icons/icon-192.png">
+<style>
+  :root { --accent: #2f5d8c; --accent-soft: #5b85b3; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent: #8db8e6; --accent-soft: #6a98c8; }
+  }
+</style>
+</head>
+<body>
+
+<div class="landing">
+  <div style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 700;">Self-Guided Tours</div>
+  <h1>셀프 가이드 투어</h1>
+  <p class="lead">현장에서 폰 한 손으로 따라가는 도보 투어 모음. 드래그로 동선을 바꾸고, 안 갈 곳은 Pass로 빼세요.</p>
+
+  <a class="version-card" href="seoul-1024/">
+    <h3>서울 도심 <span class="tag">2026.10.24</span></h3>
+    <p>안국역에서 인사동·청계천·명동을 지나 N서울타워까지. 도보 약 4km + 남산 버스. 외국인 친구와 함께 걷는 반나절 코스.</p>
+    <ul>
+      <li>안국역 · 조계사 · 쌈지길 · 인사동길</li>
+      <li>청계천 (삼일교 → 광교 한 방향)</li>
+      <li>명동거리 · 명동성당 · N서울타워</li>
+    </ul>
+  </a>
+
+  <a class="version-card" href="seoul-1024/eng.html">
+    <h3>Seoul Downtown · English <span class="tag">English</span></h3>
+    <p>같은 코스의 영어 판 — 본문·버튼·지도까지 전부 영어. 외국인 친구 폰에 띄워 주는 용도.</p>
+  </a>
+
+  <a class="version-card" href="seoul-1024/vn.html">
+    <h3>Seoul Downtown · Tiếng Việt <span class="tag">VN</span></h3>
+    <p>같은 코스의 베트남어 판 — 본문·버튼은 베트남어, 지명과 구간 지도는 영어.</p>
+  </a>
+
+
+  <div style="margin-top: 28px; padding: 16px; background: var(--bg-card); border-radius: var(--radius); font-size: 13.5px; color: var(--ink-soft); line-height: 1.7;">
+    <strong style="color: var(--ink);">💡 사용 팁</strong>
+    <ul style="margin: 8px 0 0; padding-left: 1.2em;">
+      <li>홈 화면에 추가 — 안드로이드 Chrome 메뉴 → "홈 화면에 추가"</li>
+      <li>방문·Pass·순서는 투어별로 이 폰에 자동 저장</li>
+      <li>⠿ 드래그로 정거장 순서 자유 편집</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch((e) => console.warn('SW failed:', e));
+    });
+  }
+</script>
+</body>
+</html>
