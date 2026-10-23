@@ -1,0 +1,37 @@
+{
+  "id": "./",
+  "name": "서울 도심 투어 · 10/24",
+  "short_name": "서울 투어",
+  "description": "안국역에서 인사동·청계천·명동을 지나 N서울타워까지 걷는 도보 투어",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf8f3",
+  "theme_color": "#2f5d8c",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "../navi/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../navi/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../navi/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "travel",
+    "navigation"
+  ]
+}

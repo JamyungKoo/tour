@@ -1,7 +1,7 @@
 // Tour 통합 Service Worker (모든 투어 공용)
 // scope: 이 파일이 있는 폴더 (/tour/)
 // 투어를 계속 다듬는 중이라 네트워크 우선: 온라인이면 항상 최신, 오프라인이면 마지막 캐시.
-const CACHE_VERSION = 'tour-v9';
+const CACHE_VERSION = 'tour-v10';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -17,6 +17,9 @@ const CORE_ASSETS = [
   './seoul-1024/eng.html',
   './seoul-1024/vn.html',
   './seoul-1024/stops-data.js',
+  './seoul-1024/manifest.json',
+  './seoul-1024/manifest.en.json',
+  './seoul-1024/manifest.vi.json',
   './seoul-1024/stops-data.en.js',
   './seoul-1024/stops-data.vi.js',
   './seoul-1024/routes-data.js',

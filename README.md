@@ -36,6 +36,7 @@ tour/
     ├── index.html      투어 페이지 — 구간 지도: 한국어 카카오맵 캡처 (강조색은 여기 <style>에서)
     ├── eng.html        영어 판 — 본문·버튼 전부 영어, 구간 지도는 위성사진 + 영어 라벨 (window.TOUR_VARIANT = 'en')
     ├── vn.html         베트남어 판 — 본문·버튼은 베트남어, 지명·구간 지도는 영어 (window.TOUR_VARIANT = 'vi')
+    ├── manifest.json · manifest.en.json · manifest.vi.json  언어별 설치 설정 — 그 페이지에서 홈 화면에 추가하면 그 페이지로 열리는 앱
     ├── stops-data.js   window.TOUR_DATA = { meta, stops[], walks[] } — 구조·좌표·한국어 글
     ├── stops-data.en.js window.TOUR_I18N — 영어 글만 (id별로 덮어씀)
     ├── stops-data.vi.js 〃 베트남어 글 (지명은 영어)
@@ -62,6 +63,7 @@ tour/
 - **다른 언어 판** — `stops-data.en.js`의 `window.TOUR_I18N = { meta, stops: { s01: {...} }, walks: { 's01>s02': {...} } }`를 navi-core가 데이터 위에 덮어쓴다(바꿀 글만). 표시 이름은 `name`, 둘째 줄은 `sub`. `removeStops: [id]`로 그 판에서 정거장을 아예 뺄 수 있다(영어·베트남어 판은 탑골공원 없음). 버튼·메뉴 문구는 navi-core의 `STRINGS`(ko/en/vi), 언어는 `meta.lang`. 영어·베트남어 판은 정거장 구성이 같아서 저장 키 `seoul-1024-intl`을 같이 쓴다. 코스·좌표를 바꾸면 stops-data.js 하나만, 글을 바꾸면 양쪽 파일을 같이 고친다
 - **안내 카드 여러 장** — `meta.cards: [{ summary, html, open }]` (폴란드의 `meta.ticket` 대신)
 - **하단 네비** — Pass된 정거장은 건너뜀
+- **언어별 설치 (PWA)** — 투어 페이지마다 manifest를 따로 둔다(`start_url`·`id`·앱 이름·`lang`). 그래서 `vn.html`에서 홈 화면에 추가하면 베트남어 판이, `eng.html`에서 하면 영어 판이 각각 별개 앱으로 깔린다. 아이폰은 Safari 공유 → "홈 화면에 추가" (`apple-mobile-web-app-title`로 아이콘 이름). 투어 목록(`/tour/`)은 루트 `manifest.json`
 - **Service Worker** — 네트워크 우선 + HTTP 캐시 재검증. 수정하면 새로고침 한 번에 반영되고, 오프라인이면 마지막 캐시. 지도 타일·위키미디어 사진만 캐시 우선
 
 ## 저장 상태 (localStorage)
